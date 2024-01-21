@@ -1,0 +1,35 @@
+{
+  "title": "Blog One Title",
+  "publishedAt": "2023-08-28T00:00:00.000Z",
+  "updatedAt": "2023-08-28T00:00:00.000Z",
+  "description": "This is the description for blog one",
+  "image": {
+    "filePath": "../public/blogs/emile-perron-xrVDYZRGdw4-unsplash.jpg",
+    "relativeFilePath": "../../public/blogs/emile-perron-xrVDYZRGdw4-unsplash.jpg",
+    "format": "jpeg",
+    "height": 1080,
+    "width": 1920,
+    "aspectRatio": 1.7777777777777777,
+    "blurhashDataUrl": "data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAABA0lEQVR4nCXKQStDAQDA8Xdwkra31us95eKAyDO82WyTq1hxwMHB6ZnZo3d0WXFQO6zWrsZRUfZKaHnWa1taL1khciA5IcV3+Ku9+09QFAUtksAwDBp2mevzY9yqxefbPVubGdogPJnANE2cy1Nc54Lvj2d+v175+3n3wLgWJZ3OUKtYvLTq7G5nKeT2yWd3PBCeiJHS16lXyjy5Vc6umnSJAXz+AIIsy4yExlheWsE6OuCxaWM7t0TUUQ9IksTg0DCzcwus6RsU8zmcRovV+SL+gIgQDAbp7etnZjrURrqewq7dUTo8Ya9QQhBFkc4OHzfuA1J3D7H4FMnkIlo0zoCq8g/3w47L28yCrAAAACt0RVh0Q3JlYXRpb24gVGltZQBTdW4sIDIxIEphbiAyMDI0IDA3OjUyOjA3IEdNVJB59McAAAAudEVYdFNvZnR3YXJlAGdpdGh1Yi5jb20vbWF0bWVuL0ltYWdlU2NyaXB0IHYxLjIuMTgPYZCBAAAAAElFTkSuQmCC"
+  },
+  "isPublished": true,
+  "author": "Wendy",
+  "tags": [
+    "productivity",
+    "css"
+  ],
+  "body": {
+    "raw": "\n\n# this is the h1 element\n## this is the h2 element\n\n\n",
+    "html": "<h1>this is the h1 element</h1>\n<h2>this is the h2 element</h2>"
+  },
+  "_id": "blog-one/index.mdx",
+  "_raw": {
+    "sourceFilePath": "blog-one/index.mdx",
+    "sourceFileName": "index.mdx",
+    "sourceFileDir": "blog-one",
+    "contentType": "mdx",
+    "flattenedPath": "blog-one"
+  },
+  "type": "Blog",
+  "url": "/blogs/blog-one"
+}
