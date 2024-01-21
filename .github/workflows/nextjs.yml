@@ -92,7 +92,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: $OUT_DIR
+          path: ${{ github.workspace }}/out
+
 
   # Deployment job
   deploy:
