@@ -77,10 +77,22 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       # - name: Static HTML export with Next.js
       #   run: ${{ steps.detect-package-manager.outputs.runner }} next export
+      # - name: Upload artifact
+      #   uses: actions/upload-pages-artifact@v3
+      #   with:
+      #     path: ./out
+      - name: Static HTML export with Next.js
+        run: ${{ steps.detect-package-manager.outputs.runner }} next export
+        env:
+          OUT_DIR: ./out
+
+      - name: Debug - List contents of output directory
+        run: ls -R $OUT_DIR
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: $OUT_DIR
 
   # Deployment job
   deploy:
