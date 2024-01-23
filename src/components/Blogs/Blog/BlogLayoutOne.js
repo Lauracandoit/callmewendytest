@@ -27,7 +27,7 @@ const BlogLayoutOne = ({ blog }) => {
           name={blog.tags[0]}
           className="px-6  text-sm py-2 !border  "
         />
-        <Link href={blog.url} className="mt-6">
+        <Link href={`/${blog._raw.flattenedPath}`} className="mt-6">
           <h2 className="font-bold capitalize text-2xl text-light mt-4">
             <span
               className="bg-gradient-to-r from-accent to-accent dark:from-accentDark/50 

@@ -4,9 +4,11 @@ import Link from "next/link";
 import React from "react";
 import { slug } from "github-slugger";
 import Tag from "../Elements/Tag";
+
 const HomeCoverSection = ({ blogs }) => {
   const sortedBlogs = sortBlogs(blogs);
   const blog = sortedBlogs[0];
+  const blogSlug = slug(blog._raw.flattenedPath);
   console.log({
     imagePath: blog.image.filePath,
   });
@@ -31,7 +33,7 @@ const HomeCoverSection = ({ blogs }) => {
 
         <div className="w-full lg:w-3/4 p-6 sm:p-8 md:p-12  lg:p-16 flex flex-col items-start justify-center z-0 text-light">
           <Tag href={`/categories/${blog.tags[0]}`} name={blog.tags[0]} />
-          <Link href={blog.url} className="mt-6">
+          <Link href={`/${blog._raw.flattenedPath}`}  className="mt-6">
             <h1 className="font-bold capitalize text-lg sm:text-xl md:text-3xl lg:text-4xl">
               <span
                 className="bg-gradient-to-r from-accent to-accent dark:from-accentDark/50 
