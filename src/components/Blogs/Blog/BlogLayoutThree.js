@@ -3,12 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { format } from "date-fns";
 
-const BlogLayoutThree = ({ blog }) => {
+const BlogLayoutThree = ({ blog, basePath = "."  }) => {
   return (
     <div className=" group flex flex-col items-center  text-dark">
       <Link href={blog.url} className=" h-full rounded-xl overflow-hidden">
         <Image
-          src={blog.image.filePath.replace("../public", ".")}
+          src={blog.image.filePath.replace("../public", basePath)}
           placeholder="blur"
           blurDataURL={blog.image.blurhashDataUrl}
           alt={blog.title}
@@ -22,7 +22,7 @@ const BlogLayoutThree = ({ blog }) => {
         <span className="uppercase text-accent font-semibold text-sm">
           {blog.tags[0]}
         </span>
-        <Link href={`/${blog._raw.flattenedPath}`} className="inline-block my-1">
+        <Link href={`/blogs/${blog._raw.flattenedPath}`} className="inline-block my-1">
           <h2 className="font-semibold capitalize text-lg text-light">
             <span
               className="bg-gradient-to-r from-accent/50 to-accent/50 dark:from-accentDark/50 

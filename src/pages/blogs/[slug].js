@@ -1,15 +1,15 @@
 import { useRouter } from "next/router";
 import { allBlogs } from "@/.contentlayer/generated/index.mjs";
-import Tag from "../components/Blogs/Elements/Tag";
+import Tag from "../../components/Blogs/Elements/Tag";
 import Image from "next/image";
-import BlogDetails from "../components/Blogs/Blog/BlogDetails";
+import BlogDetails from "../../components/Blogs/Blog/BlogDetails";
 import { slug } from "github-slugger";
-import RenderMdx from "../components/Blogs/Blog/RenderMdx";
+import RenderMdx from "../../components/Blogs/Blog/RenderMdx";
 
 export default function BlogPage() {
   const router = useRouter();
   const blog = allBlogs.find(
-    (blog) => blog._raw.flattenedPath === router.query.slug
+    blog => blog._raw.flattenedPath === router.query.slug
   );
 
   if (!blog) {
@@ -23,7 +23,7 @@ export default function BlogPage() {
         <div className="w-full z-10 flex flex-col items-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ">
           <Tag
             name={blog.tags[0]}
-            link={`/categories/${blog.tags[0]}`}
+            link={`/categories/${slug(blog.tags[0])}`}
             className="px-6 text-sm py-2"
           />
           <h1 className="inline-block mt-6 font-semibold capitalize text-light text-5xl leading-normal relative w-5/6">
@@ -32,7 +32,7 @@ export default function BlogPage() {
         </div>
         <div className="absolute top-0 left-0 right-0 bottom-0 h-full bg-dark/60" />
         <Image
-          src={blog.image.filePath.replace("../public", ".")}
+          src={blog.image.filePath.replace("../public", "../")}
           placeholder="blur"
           blurDataURL={blog.image.blurhashDataUrl}
           alt={blog.title}

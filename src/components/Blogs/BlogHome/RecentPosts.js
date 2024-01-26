@@ -23,7 +23,7 @@ const RecentPosts = ({ blogs }) => {
         {sortedBlogs.slice(5, 11).map((blog, index) => {
           return (
             <aritcle key={index} className="col-span-1 row-span-1 relative ">
-              <BlogLayoutThree blog={blog} />
+              <BlogLayoutThree blog={blog} basePath="." />
             </aritcle>
           );
         })}

@@ -26,7 +26,7 @@ const BlogLayoutOne = ({ blog }) => {
         <span className="uppercase text-accent font-semibold text-sm">
           {blog.tags[0]}
         </span>
-        <Link href={`/${blog._raw.flattenedPath}`} className="inline-block my-1">
+        <Link href={`/blogs/${blog._raw.flattenedPath}`} className="inline-block my-1">
           <h2 className="font-semibold capitalize text-lg text-light">
             <span
               className="bg-gradient-to-r from-accent/50 to-accent/50 dark:from-accentDark/50 

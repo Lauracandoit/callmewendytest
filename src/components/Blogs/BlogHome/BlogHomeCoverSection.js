@@ -12,6 +12,7 @@ const HomeCoverSection = ({ blogs }) => {
   console.log({
     imagePath: blog.image.filePath,
   });
+
   return (
     <div className="w-full inline-block">
       <article className="flex flex-col items-start justify-end mx-5 sm:mx-10 relative h-[60vh] sm:h-[85vh]">
@@ -32,8 +33,8 @@ const HomeCoverSection = ({ blogs }) => {
         />
 
         <div className="w-full lg:w-3/4 p-6 sm:p-8 md:p-12  lg:p-16 flex flex-col items-start justify-center z-0 text-light">
-          <Tag href={`/categories/${blog.tags[0]}`} name={blog.tags[0]} />
-          <Link href={`/${blog._raw.flattenedPath}`}  className="mt-6">
+          <Tag href={`/categories/${slug(blog.tags[0])}`} name={blog.tags[0]} />
+          <Link href={`/blogs/${blog._raw.flattenedPath}`}  className="mt-6">
             <h1 className="font-bold capitalize text-lg sm:text-xl md:text-3xl lg:text-4xl">
               <span
                 className="bg-gradient-to-r from-accent to-accent dark:from-accentDark/50 
