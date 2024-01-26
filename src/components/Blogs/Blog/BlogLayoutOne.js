@@ -24,7 +24,7 @@ const BlogLayoutOne = ({ blog }) => {
 
       <div className="absolute bottom-0 p-10 z-20 w-full">
         <Tag
-          href={`/categories/${slug(blog.tags[0])}`}
+          href={`/categories/${slug(blog.tags[0])}`} 
           name={blog.tags[0]}
           className="px-6  text-sm py-2 !border  "
         />
