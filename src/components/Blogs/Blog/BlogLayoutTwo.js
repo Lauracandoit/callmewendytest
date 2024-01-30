@@ -6,7 +6,7 @@ import { format } from "date-fns";
 
 const BlogLayoutOne = ({ blog }) => {
   return (
-    <div className="group grid grid-cols-12 gap-4 items-center text-dark">
+    <div className="group grid grid-cols-12  gap-4 items-center text-dark">
       <Link
         href={blog.url}
         className="col-span-4 h-full rounded-xl overflow-hidden"
@@ -23,11 +23,11 @@ const BlogLayoutOne = ({ blog }) => {
       </Link>
 
       <div className="col-span-8 w-full">
-        <span className="uppercase text-accent font-semibold text-sm">
+        <span className="inline-block w-full uppercase text-accent dark:text-accentDark font-semibold text-xs sm:text-sm">
           {blog.tags[0]}
         </span>
         <Link href={`/blogs/${blog._raw.flattenedPath}`} className="inline-block my-1">
-          <h2 className="font-semibold capitalize text-lg text-light">
+          <h2 className="font-semibold capitalize sm:text-lg dark:text-light">
             <span
               className="bg-gradient-to-r from-accent/50 to-accent/50 dark:from-accentDark/50 
                 dark:to-accentDark/50 bg-[length:0px_6px]
@@ -37,7 +37,7 @@ const BlogLayoutOne = ({ blog }) => {
             </span>
           </h2>
         </Link>
-        <span className="dark:text-light/50 capitalize font-semibold text-base">
+        <span className="inline-block w-full capitalize text-gray dark:text-light/50 font-semibold  text-xs sm:text-base">
           {format(new Date(blog.publishedAt), "MMMM dd, yyyy")}
         </span>
       </div>
