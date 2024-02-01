@@ -5,8 +5,6 @@ import Link from "next/link";
 import { slug } from "github-slugger";
 
 const BlogDetails = ({ blog, slug }) => {
-  console.log("blog.readingTime:", blog.readingTime);
-
   return (
     <div className="px-10 bg-accent text-light py-2 flex items-center justify-around flex-wrap text-xl font-medium mx-10 rounded-lg">
       <time className="m-3">

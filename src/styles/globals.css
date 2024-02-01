@@ -29,7 +29,6 @@ h3>a>.icon.icon-link:before{
 }
 h2 > a, h3 >a {
   text-decoration: none !important;
-  color: white;
 }
 
 code {

@@ -41,7 +41,7 @@ export default function BlogPage() {
           className="aspect-square w-full h-full object-cover object-center "
         />
       </div>
-      <BlogDetails blog={blog} slug={slug} />
+      <BlogDetails blog={blog} slug={slug}/>
       <div className="grid grid-cols-12 gap-16 mt-8 px-10 text-dark dark:text-light ">
         <div className="col-span-4">
           <details
