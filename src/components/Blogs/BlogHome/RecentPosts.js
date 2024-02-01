@@ -7,7 +7,7 @@ const RecentPosts = ({ blogs }) => {
   const sortedBlogs = sortBlogs(blogs);
   return (
     <section className="w-full mt-32 px-32 flex flex-col items-center justify-center  ">
-      <div className="flex w-full justify-between">
+      <div className="flex w-full justify-between sm:flex-col">
         <h2 className="w-full inline-block font-bold capitalize text-4xl text-dark dark:text-light ">
           Recent Posts
         </h2>

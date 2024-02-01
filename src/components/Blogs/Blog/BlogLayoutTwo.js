@@ -6,10 +6,10 @@ import { format } from "date-fns";
 
 const BlogLayoutOne = ({ blog }) => {
   return (
-    <div className="group grid grid-cols-12  gap-4 items-center text-dark">
+    <div className="group grid grid-cols-12  gap-4 items-center text-dark ">
       <Link
         href={blog.url}
-        className="col-span-4 h-full rounded-xl overflow-hidden"
+        className="col-span-4 h-full rounded-xl overflow-hidden sm:col-span-12 "
       >
         <Image
           src={blog.image.filePath.replace("../public", ".")}
@@ -22,7 +22,7 @@ const BlogLayoutOne = ({ blog }) => {
         />
       </Link>
 
-      <div className="col-span-8 w-full">
+      <div className="col-span-8 w-full sm:col-span-12 ">
         <span className="inline-block w-full uppercase text-accent dark:text-accentDark font-semibold text-xs sm:text-sm">
           {blog.tags[0]}
         </span>

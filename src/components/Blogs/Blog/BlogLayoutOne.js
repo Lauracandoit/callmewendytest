@@ -22,18 +22,18 @@ const BlogLayoutOne = ({ blog }) => {
         className="w-full h-full object-center object-cover rounded-xl group-hover:scale-105 transition-all duration-300 "
       />
 
-      <div className="absolute bottom-0 p-4 xs:p-6 sm:p-10 z-20 ">
+      <div className="absolute bottom-0 mt-2 p-4 xs:p-6 sm:p-10 z-20 ">
         <Tag
           href={`/categories/${slug(blog.tags[0])}`} 
           name={blog.tags[0]}
-          className="px-6 sm:text-sm sm:py-2 py-1 !border  "
+          className="px-6 text-3xl sm:py-2 py-1 sm:px-3 !border  "
         />
         <Link href={`/blogs/${blog._raw.flattenedPath}`} className="mt-6">
-          <h2 className="font-bold capitalize text-sm xs:text-base sm:text-lg md:text-2xl text-light mt-2 sm:mt-4">
+          <h2 className="font-bold capitalize text-lg xs:text-base sm:text-lg md:text-2xl text-light mt-2 sm:mt-4">
             <span
               className="bg-gradient-to-r from-accent to-accent dark:from-accentDark/50 
                 dark:to-accentDark/50 bg-[length:0px_6px]
-                group-hover:bg-[length:100%_6px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 "
+                group-hover:bg-[length:100%_6px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 sm:text-lg"
             >
               {blog.title}
             </span>
