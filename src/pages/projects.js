@@ -25,7 +25,7 @@ const FeatureProject = ({ type, title, summary, img, link, github }) => {
         <FramerImage
           src={img}
           alt={title}
-          className="w-full h-auto"
+          className="w-full h-auto max-w-full"
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.2 }}
         />
@@ -79,7 +79,7 @@ const Project = ({ title, type, img, link, github }) => {
         <FramerImage
           src={img}
           alt={title}
-          className="w-full h-auto"
+          className="w-full h-auto max-w-full"
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.2 }}
           priority
@@ -131,12 +131,12 @@ const projects = () => {
       <main className="w-full mb-16 p-20 flex flex-col items-center justify-center text-dark dark:text-light">
         <Layout className="pt-16">
           <AnimatedText
-            text="Imagination Trumps Knowledge!"
-            className="mb-16 lg:text-7xl sm:mb-8 sm:!text-6xl cx:!text-4xl"
+            text="Work Hard, Play Hard!"
+            className="mb-16 lg:text-6xl sm:mb-8 sm:!text-3xl"
           ></AnimatedText>
 
           <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
-            <div className="col-span-12">
+            <div className="col-span-12 ">
               <FeatureProject
                 title=" Personal Web Application "
                 img={logo}
@@ -146,7 +146,7 @@ const projects = () => {
                 type="Feature Project"
               />
             </div>
-            <div className="col-span-6">
+            <div className="col-span-6 sm:col-span-12">
               <Project
                 title=" Crypto Screener Application "
                 img={project1}
@@ -155,7 +155,7 @@ const projects = () => {
                 type="Feature Project"
               />
             </div>
-            <div className="col-span-6">
+            <div className="col-span-6 sm:col-span-12">
               <Project
                 title="  Crypto Screener Application "
                 img={project1}

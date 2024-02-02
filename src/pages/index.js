@@ -28,30 +28,28 @@ export default function Home() {
               />
             </div>
             <div className="w-1/2 flex flex-col items-center self-center lg:w-full lg:text-center lg:pt-3 ">
-              <h2 className="xl:!text-5xl lg:!text-6xl md:!text-5xl sm:!text-1xl !text-6xl font-extrabold ">
-                <div className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 mb-3">
-                  {" "}
-                  Hi! I am
-                </div>
-              </h2>
-
-              <h2>
-                <TypeAnimation
-                  sequence={[
-                    // Same substring at the start will only be typed out once, initially
-                    "Wendy ",
-                    1000, // wait 1s before replacing "Mice" with "Hamsters"
-                    "A Web Developer",
-                    1000,
-                    "A Customer Support Team Lead ",
-                    1000,
-                  ]}
-                  wrapper="span"
-                  speed={50}
-                  repeat={Infinity}
-                  className=" text-5xl lg:text-6xl m-2 flex items-center justify-center text-center"
-                />
-              </h2>
+                <h2 className="xl:!text-5xl lg:!text-6xl md:!text-5xl sm:!text-1xl !text-6xl font-extrabold ">
+                  <div className="mb-3 sm:text-2xl"> Hi! I am</div>
+                </h2>
+                <div className="h-24 sm:h-32 ">
+                <h2>
+                  <TypeAnimation
+                    sequence={[
+                      // Same substring at the start will only be typed out once, initially
+                      "Wendy ",
+                      1000, // wait 1s before replacing "Mice" with "Hamsters"
+                      "A Web Developer",
+                      1000,
+                      "A Customer Support Team Lead ",
+                      1000,
+                    ]}
+                    wrapper="span"
+                    speed={50}
+                    repeat={Infinity}
+                    className="sm:!text-3xl text-5xl lg:text-6xl m-2 flex items-center justify-center text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600"
+                  />
+                </h2>
+              </div>
 
               <p className="my-4 text-base font-medium md:text-sm sm:text-xs ">
                 {" "}

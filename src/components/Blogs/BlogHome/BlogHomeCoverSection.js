@@ -32,20 +32,20 @@ const HomeCoverSection = ({ blogs }) => {
           priority
         />
 
-        <div className="w-full lg:w-3/4 p-6 sm:p-8 md:p-12  lg:p-16 flex flex-col items-start justify-center z-0 text-light">
+        <div className="w-full lg:w-3/4 p-6 sm:p-8 md:p-12  lg:p-16 flex flex-col items-start sm:items-center justify-center z-0 text-light">
           <Tag href={`/categories/${slug(blog.tags[0])}`} name={blog.tags[0]} />
           <Link href={`/blogs/${blog._raw.flattenedPath}`}  className="mt-6">
-            <h1 className="font-bold capitalize text-lg sm:text-xl md:text-3xl lg:text-4xl">
+            <h1 className="font-bold capitalize text-lg md:text-3xl lg:text-4xl ">
               <span
                 className="bg-gradient-to-r from-accent to-accent dark:from-accentDark/50 
                 dark:to-accentDark/50 bg-[length:0px_6px]
-                hover:bg-[length:100%_6px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 "
+                hover:bg-[length:100%_6px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 sm:text-2xl sm:flex sm:text-center "
               >
                 {blog.title}
               </span>
             </h1>
           </Link>
-          <p className="sm:inline-block mt-4 md:text-lg lg:text-xl font-in">
+          <p className="sm:inline-block mt-4 md:text-lg lg:text-xl font-in sm:text-center sm:text-light/60 ">
             {blog.description}
           </p>
         </div>

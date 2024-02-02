@@ -23,7 +23,7 @@ const BlogLayoutOne = ({ blog }) => {
       </Link>
 
       <div className="col-span-8 w-full sm:col-span-12 ">
-        <span className="inline-block w-full uppercase text-accent dark:text-accentDark font-semibold text-xs sm:text-sm">
+        <span className="inline-block w-full uppercase text-accent dark:text-accentDark font-semibold sm:text-sm">
           {blog.tags[0]}
         </span>
         <Link href={`/blogs/${blog._raw.flattenedPath}`} className="inline-block my-1">
