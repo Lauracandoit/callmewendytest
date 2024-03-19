@@ -35,7 +35,7 @@ const about = () => {
   return (
     <>
       <Head>
-        <title> Nugget | About Page </title>
+        <title> CallmeWendy | About Page </title>
         <meta name="description" content="any description" />
       </Head>
 
@@ -50,7 +50,7 @@ const about = () => {
               </h2>
               <p className=" text-dark font-medium dark:text-light ">
                 {" "}
-                Hello! Nugget's here, and I have a genuine passion for creating
+                Hello! Im Wendy, and I have a genuine passion for creating
                 captivating digital experiences. As a seasoned web developer, I
                 specialize in building websites and mobile apps that are not
                 just visually appealing but also intuitive and user-focused.

@@ -9,7 +9,6 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: "rgb(var(--background))",
         dark: "#1b1b1b",
         light: "#f5f5f5",
         primary: "#B63E96", // 240,86,199
@@ -22,11 +21,6 @@ module.exports = {
         // secondary: colors.green,
         // third: colors.pink,
       },
-      boxShadow: {
-        "glass-inset": "inset 0 17px 5px -9px rgba(254,254,91, 0.05)",
-        "glass-sm": "5px 5px 20px 0px rgba(254,254,91, 0.3)",
-      },
-
       fontFamily: {
         mr: ["var(--font-mr)"],
         in: ["var(--font-in)"],
@@ -68,9 +62,6 @@ module.exports = {
         "2xl": { max: "1535px" },
         // => @media (max-width: 1535px) { ... }
 
-        // sxl: "1180px",
-        // xs1: "480px",
-
         xl: { max: "1279px" },
         // => @media (max-width: 1279px) { ... }
 
@@ -78,7 +69,7 @@ module.exports = {
         // => @media (max-width: 1023px) { ... }
 
         md: { max: "767px" },
-        // => @media (max-width: 767px) { ... } => for phone usually
+        // => @media (max-width: 767px) { ... }
 
         sm: { max: "639px" },
         // => @media (max-width: 639px) { ... }
@@ -88,5 +79,7 @@ module.exports = {
       },
     },
   },
-  plugins: [require("@tailwindcss/forms"), require("@tailwindcss/typography")],
+  plugins: [
+  require("@tailwindcss/forms"),
+   require("@tailwindcss/typography")],
 };
