@@ -14,8 +14,8 @@ const FramerImage = motion(Image);
 
 const FeatureProject = ({ type, title, summary, img, link, github }) => {
   return (
-    <article className="w-full flex items-center justify-between relative rounded-br-2xl rounded-3xl border border-solid border-dark bg-light shawdow-2xl p-12 dark:bg-dark dark:border-light lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4 ">
-      <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-dark rounded-br-3xl  dark:bg-light " />
+    <article className="w-full flex items-center justify-between relative rounded-br-2xl rounded-3xl border border-solid border-dark bg-light shawdow-2xl p-12 dark:bg-dark dark:border-light lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4 md:w-2/3  ">
+      <div className="absolute top-0 -right-3 -z-10 w-[101%]  h-[103%] rounded-[2.5rem] bg-dark dark:bg-light rounded-br-3xl" />
 
       <Link
         href={link}
@@ -25,9 +25,11 @@ const FeatureProject = ({ type, title, summary, img, link, github }) => {
         <FramerImage
           src={img}
           alt={title}
-          className="w-full h-auto max-w-full"
+          className="w-full h-auto "
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.2 }}
+          sizes="(max-width: 768px) 100%,
+            (max-width:1200px) 50%, 50%"
         />
       </Link>
       <div className="w-1/2 flex flex-col  items-start justify-between pl-6  lg:w-full lg:pl-0 lg:pt-6">
@@ -68,7 +70,7 @@ const FeatureProject = ({ type, title, summary, img, link, github }) => {
 
 const Project = ({ title, type, img, link, github }) => {
   return (
-    <article className="w-full flex flex-col items-center justify-center rounded-2xl border border-solid border-dark bg-light p-6 relative dark:bg-dark dark:boder-light">
+    <article className="w-full  lg:w-2/3 md:w-1/2 flex flex-col items-center justify-center rounded-2xl border border-solid border-dark bg-light p-6 relative dark:bg-dark dark:boder-light h-2/3">
       <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-dark rounded-br-3xl dark:bg-light xs:p-4  md:-right-2 md:w-[101%] xs:h-[102%] xs:rounded-[1.5rem] " />
 
       <Link
@@ -79,7 +81,7 @@ const Project = ({ title, type, img, link, github }) => {
         <FramerImage
           src={img}
           alt={title}
-          className="w-full h-auto max-w-full"
+          className="w-full h-auto"
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.2 }}
           priority
@@ -128,15 +130,15 @@ const projects = () => {
 
       <TransitionEffect />
 
-      <main className="w-full mb-16 p-20 flex flex-col items-center justify-center text-dark dark:text-light">
+      <main className="w-full mb-16 p-20 flex flex-col items-center justify-center text-dark dark:text-light md:p-5">
         <Layout className="pt-16">
           <AnimatedText
             text="Work Hard, Play Hard!"
-            className="mb-16 lg:text-6xl sm:mb-8 sm:!text-3xl"
+            className="mb-16 lg:!text-6xl sm:mb-8 md:!text-4xl sm:!text-3xl"
           ></AnimatedText>
 
           <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
-            <div className="col-span-12 ">
+            <div className="col-span-12">
               <FeatureProject
                 title=" Personal Web Application "
                 img={logo}
@@ -146,22 +148,22 @@ const projects = () => {
                 type="Feature Project"
               />
             </div>
-            <div className="col-span-6 sm:col-span-12">
+            <div className="col-span-6 md:col-span-12">
               <Project
                 title=" Crypto Screener Application "
                 img={project1}
                 link="/"
                 github="/"
-                type="Feature Project"
+                type="Project 1"
               />
             </div>
-            <div className="col-span-6 sm:col-span-12">
+            <div className="col-span-6 md:col-span-12">
               <Project
                 title="  Crypto Screener Application "
                 img={project1}
                 link="/"
                 github="/"
-                type="Feature Project"
+                type="Project 2"
               />{" "}
             </div>
 
@@ -183,7 +185,7 @@ const projects = () => {
                 img={project1}
                 link="/"
                 github="/"
-                type="Feature Project"
+                type="Project 3"
               />
             </div>
             <div className="col-span-6">
@@ -192,7 +194,7 @@ const projects = () => {
                 img={project1}
                 link="/"
                 github="/"
-                type="Feature Project"
+                type="Project 4"
               />
             </div>
           </div>
