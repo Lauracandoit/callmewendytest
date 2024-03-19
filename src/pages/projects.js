@@ -14,23 +14,28 @@ const FramerImage = motion(Image);
 
 const FeatureProject = ({ type, title, summary, img, link, github }) => {
   return (
-    <article className="w-full flex items-center justify-between relative rounded-br-2xl rounded-3xl border border-solid border-dark bg-light shawdow-2xl p-12 dark:bg-dark dark:border-light lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4 ">
-      <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-dark rounded-br-3xl  dark:bg-light " />
-
+    <article className="w-full flex items-center justify-between relative rounded-br-2xl rounded-3xl border border-solid border-dark bg-light shawdow-2xl 
+    p-12 dark:bg-dark dark:border-light  ">
+      <div className="absolute top-0 -right-3 -z-10 w-[101%]  h-[103%] rounded-[2.5rem] bg-dark dark:bg-light rounded-br-3xl" />
       <Link
         href={link}
         target="_blank"
-        className="w-1/2 cursor-poiter overflow-hidden rounded-lg lg:w-full "
+        className=" w-1/2 cursor-poiter overflow-hidden rounded-lg lg:w-full "
       >
         <FramerImage
           src={img}
           alt={title}
-          className="w-full h-auto max-w-full"
+          className="w-full h-auto"
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.2 }}
+          priority
+          sizes="(max-width: 768px) 100%, 
+          (max-width: 1200px) 50%,
+          50%"
         />
       </Link>
-      <div className="w-1/2 flex flex-col  items-start justify-between pl-6  lg:w-full lg:pl-0 lg:pt-6">
+
+      <div className="w-1/2 flex flex-col items-start justify-between pl-6 lg:w-full lg:pl-0 lg:pt-6">
         <span className="text-primary font-medium text-xl dark:text-primaryDark xs:text-base ">
           {type}
         </span>
@@ -40,7 +45,7 @@ const FeatureProject = ({ type, title, summary, img, link, github }) => {
           target="_blank"
           className="hover:underline underline-offset-2 "
         >
-          <h2 className="my-2 w-full text-left text-4xl font-bold dark:text-light sm:text-sm ">
+          <h2 className="my-2 w-full text-left text-4xl font-bold dark:text-light sm:text-sm">
             {title}
           </h2>
         </Link>
@@ -68,9 +73,8 @@ const FeatureProject = ({ type, title, summary, img, link, github }) => {
 
 const Project = ({ title, type, img, link, github }) => {
   return (
-    <article className="w-full flex flex-col items-center justify-center rounded-2xl border border-solid border-dark bg-light p-6 relative dark:bg-dark dark:boder-light">
+    <article className="w-full  lg:w-2/3 md:w-1/2 flex flex-col items-center justify-center rounded-2xl border border-solid border-dark bg-light p-6 relative dark:bg-dark dark:boder-light">
       <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-dark rounded-br-3xl dark:bg-light xs:p-4  md:-right-2 md:w-[101%] xs:h-[102%] xs:rounded-[1.5rem] " />
-
       <Link
         href={link}
         target="_blank"
@@ -122,79 +126,79 @@ const projects = () => {
   return (
     <>
       <Head>
-        <title> CallmeWendy | Projects Page </title>
+        <title> Nugget | Projects Page </title>
         <meta name="description" content="any description" />
       </Head>
 
       <TransitionEffect />
 
-      <main className="w-full mb-16 p-20 flex flex-col items-center justify-center text-dark dark:text-light">
+      <main className="w-full mb-16 p-20 md:px-10 md:py-5 flex flex-col items-center justify-center text-dark dark:text-light">
         <Layout className="pt-16">
           <AnimatedText
             text="Work Hard, Play Hard!"
-            className="mb-16 lg:text-6xl sm:mb-8 sm:!text-3xl"
+            className="mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
           ></AnimatedText>
 
-          <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
-            <div className="col-span-12 ">
-              <FeatureProject
-                title=" Personal Web Application "
-                img={logo}
-                summary="A personal web application using React, Tailwind CSS, and React Router. This project embodies my deep understanding and expertise in these technologies"
-                link="/"
-                github="/"
-                type="Feature Project"
-              />
-            </div>
-            <div className="col-span-6 sm:col-span-12">
-              <Project
-                title=" Crypto Screener Application "
-                img={project1}
-                link="/"
-                github="/"
-                type="Feature Project"
-              />
-            </div>
-            <div className="col-span-6 sm:col-span-12">
-              <Project
-                title="  Crypto Screener Application "
-                img={project1}
-                link="/"
-                github="/"
-                type="Feature Project"
-              />{" "}
-            </div>
+          <div className="grid grid-cols-12 gap-24 gap-y-32 lg:gap-x-12 md:gap-x-5 md:gap-y-24 sm:gap-x-0">
+                <div className="col-span-12">
+                  <FeatureProject
+                    title=" Personal Web Application "
+                    img={logo}
+                    summary="A personal web application using React, Tailwind CSS, and React Router. This project embodies my deep understanding and expertise in these technologies"
+                    link="/"
+                    github="/"
+                    type="Feature Project"
+                  />
+                </div>
+                <div className=" col-span-6 md:col-span-12">
+                  <Project
+                    title=" Crypto Screener Application "
+                    img={project1}
+                    link="/"
+                    github="/"
+                    type="Project"
+                  />
+                </div>
+                <div className=" col-span-6 md:col-span-12">
+                  <Project
+                    title="  Crypto Screener Application "
+                    img={project1}
+                    link="/"
+                    github="/"
+                    type=" Project 1"
+                  />{" "}
+                </div>
 
-            <div className="col-span-12">
-              <FeatureProject
-                title="  Crypto Screener Application "
-                img={project1}
-                summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
-                    It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
-                    local currency."
-                link="/"
-                github="/"
-                type="Feature Project"
-              />
-            </div>
-            <div className="col-span-6">
-              <Project
-                title="  Crypto Screener Application "
-                img={project1}
-                link="/"
-                github="/"
-                type="Feature Project"
-              />
-            </div>
-            <div className="col-span-6">
-              <Project
-                title="  Crypto Screener Application "
-                img={project1}
-                link="/"
-                github="/"
-                type="Feature Project"
-              />
-            </div>
+                <div className="col-span-12">
+                  <FeatureProject
+                    title=" Crypto Screener Application "
+                    img={project1}
+                    summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
+                        It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
+                        local currency."
+                    link="/"
+                    github="/"
+                    type=" Project"
+                  />
+                </div>
+                <div className=" col-span-6">
+                  <Project
+                    title="  Crypto Screener Application "
+                    img={project1}
+                    link="/"
+                    github="/"
+                    type="Project"
+                  />
+                </div>
+                <div className=" col-span-6">
+                  <Project
+                    title="  Crypto Screener Application "
+                    img={project1}
+                    link="/"
+                    github="/"
+                    type="Project"
+                  />
+                </div>
           </div>
         </Layout>
       </main>
@@ -203,3 +207,4 @@ const projects = () => {
 };
 
 export default projects;
+
