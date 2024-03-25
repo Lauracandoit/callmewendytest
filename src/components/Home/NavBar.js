@@ -40,7 +40,7 @@ const CustomMobileLink = ({ href, title, className = "", toggle }) => {
   return (
     <button
       href={href}
-      className={`${className} relative group  text-light dark:text-dark my-2`}
+      className={`${className} relative group text-light dark:text-dark my-2`}
       onClick={handleClick}
     >
       {title}
@@ -64,9 +64,9 @@ const NavBar = () => {
   };
 
   return (
-    <header className="w-full px-32 py-12 font-medium flex items-center justify-between text-dark dark:text-light relative z-30 lg:px-16 md:px-12 sm:px8">
+    <header className="w-full px-32 py-12 font-medium flex items-center justify-between text-dark dark:text-light relative z-30 laptop:px-16 tablet:px-12 mobile:px-8">
       <button
-        className="  flex-col justify-center items-center hidden lg:flex"
+        className="flex-col justify-center items-center laptop:hidden"
         onClick={handleClick}
       >
         <span
@@ -87,12 +87,11 @@ const NavBar = () => {
       </button>
 
       {/* Laptop */}
-      <div className="w-full flex justify-between items-center lg:hidden">
+      <div className="w-full laptop:flex justify-between items-center mobile:hidden tablet:hidden">
         <nav>
           <CustomLink href="/" title="Home" className="mr-4" />
           <CustomLink href="/about" title="About" className="mx-4" />
           <CustomLink href="/projects" title="Projects" className="mx-4" />
-          {/* <CustomLink href="/blogs" title="Blogs" className="ml-4" /> */}
           <CustomLink href="/blog" title="Blog" className="ml-4" />
         </nav>
 
@@ -204,7 +203,7 @@ const NavBar = () => {
               target={"_blank"}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
-              className="w-6 mr-3 sm:mx-1"
+              className="w-6 mr-3 mobile:mx-1"
             >
               <TwitterIcon />
             </motion.a>
@@ -214,7 +213,7 @@ const NavBar = () => {
               target={"_blank"}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
-              className="w-6 mx-3 bg-light rounded-full dark:bg-dark sm:mx-1"
+              className="w-6 mx-3 bg-light rounded-full dark:bg-dark mobile:mx-1"
             >
               <GithubIcon />
             </motion.a>
@@ -224,7 +223,7 @@ const NavBar = () => {
               target={"_blank"}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
-              className="w-6 mx-3 sm:mx-1"
+              className="w-6 mx-3 mobile:mx-1"
             >
               <LinkedInIcon />
             </motion.a>
@@ -234,7 +233,7 @@ const NavBar = () => {
               target={"_blank"}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
-              className="w-6 mx-3 bg-light rounded-full sm:mx-1 "
+              className="w-6 mx-3 bg-light rounded-full mobile:mx-1 "
             >
               <PinterestIcon />
             </motion.a>
@@ -244,7 +243,7 @@ const NavBar = () => {
               target={"_blank"}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
-              className="w-6 ml-3 sm:mx-1"
+              className="w-6 ml-3 mobile:mx-1"
             >
               <DribbbleIcon />
             </motion.a>

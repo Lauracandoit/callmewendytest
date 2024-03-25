@@ -8,6 +8,16 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
+      screens: {
+        mobile: "480px",
+        // (mobile: min-width: 480px)
+
+        tablet: "640px",
+        // => @media (min-width: 640px) { ... }
+
+        laptop: "1024px",
+        // => @media (min-width: 1024px) { ... }
+      },
       colors: {
         dark: "#1b1b1b",
         light: "#f5f5f5",
@@ -16,10 +26,6 @@ module.exports = {
         accentDark: "#ffdb4d",
         accent: "#7B00D3",
         gray: "#747474",
-
-        // ...colors,
-        // secondary: colors.green,
-        // third: colors.pink,
       },
       fontFamily: {
         mr: ["var(--font-mr)"],
@@ -58,28 +64,7 @@ module.exports = {
         circularDarkSm:
           "repeating-radial-gradient(rgba(255,255,255,0.5) 2px,#1b1b1b 8px,#1b1b1b 40px)",
       },
-      screens: {
-        "2xl": { max: "1535px" },
-        // => @media (max-width: 1535px) { ... }
-
-        xl: { max: "1279px" },
-        // => @media (max-width: 1279px) { ... }
-
-        lg: { max: "1023px" },
-        // => @media (max-width: 1023px) { ... }
-
-        md: { max: "767px" },
-        // => @media (max-width: 767px) { ... }
-
-        sm: { max: "639px" },
-        // => @media (max-width: 639px) { ... }
-
-        xs: { max: "479px" },
-        // => @media (max-width: 479px) { ... }
-      },
     },
   },
-  plugins: [
-  require("@tailwindcss/forms"),
-   require("@tailwindcss/typography")],
+  plugins: [require("@tailwindcss/forms"), require("@tailwindcss/typography")],
 };
