@@ -28,7 +28,7 @@ export default function Home() {
               />
             </div>
 
-            <div className="w-1/2 tablet:w-3/4 mobile:w-2/3 sm:w-3/4 flex flex-col items-center self-center laptop:w-full laptop:text-center laptop:pt-3 tablet:pt-7 tablet:mx-10 mobile:pt-7 sm:pt-5  ">
+            <div className="w-3/4 flex flex-col items-center self-center laptop:w-full laptop:text-center laptop:pt-3 tablet:pt-7 tablet:mx-10 mobile:pt-7 sm:pt-5  ">
               <h2 className="laptop:!text-8xl tablet:!text-4xl mobile:!text-xl font-extrabold ">
                 <div className="mb-3 laptop:text-5xl sm:text-2xl"> Hi! I am</div>
               </h2>
@@ -52,7 +52,7 @@ export default function Home() {
                 </h2>
               </div>
 
-              <p className="text-left my-4 laptop:text-base font-medium tablet:text-sm mobile:text-xs ">
+              <p className="text-left my-4 laptop:text-base font-medium tablet:text-sm  ">
                 {" "}
                 Thank you for checking in on my website. CallmeWendy is the
                 place I share my personal projects, my passion with daily stuff

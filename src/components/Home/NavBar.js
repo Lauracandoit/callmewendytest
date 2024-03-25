@@ -64,7 +64,7 @@ const NavBar = () => {
   };
 
   return (
-    <header className="w-full px-32 py-12 font-medium flex items-center justify-between text-dark dark:text-light relative z-30 laptop:px-16 tablet:px-12 mobile:px-8 sm:px-5">
+    <header className="w-full laptop:px-32 py-12 font-medium flex items-center justify-between text-dark dark:text-light relative z-30 tablet:px-16 mobile:px-8 sm:px-5">
       <button
         className="flex-col justify-center items-center laptop:hidden sm:ml-1 "
         onClick={handleClick}
@@ -263,7 +263,7 @@ const NavBar = () => {
           </nav>
         </motion.div>
       ) : null}
-      <div className="absolute left-[50%] top-2 translate-x-[-50%] ">
+      <div className=" absolute left-[50%] top-4 translate-x-[-50%] ">
         <Logo />
       </div>
     </header>
