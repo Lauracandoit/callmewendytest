@@ -9,10 +9,11 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        mobile: "480px",
-        // (mobile: min-width: 480px)
+        sm: { min: "300px", max: "479px" },
+        mobile: { min: "480px", max: "639px" },
+        // => @media (min-width: 768px and max-width: 1023px) { ... }
 
-        tablet: "640px",
+        tablet: { min: "640px", max: "1024px" },
         // => @media (min-width: 640px) { ... }
 
         laptop: "1024px",
