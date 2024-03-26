@@ -15,7 +15,7 @@ const FeaturedPosts = ({ blogs }) => {
         <article className="laptop:col-span-1 tablet:col-span-2 mobile:col-span-2 sm:col-span-2 w-full h-full row-span-2 relative ">
           <BlogLayoutOne blog={sortedBlogs[1]} />
         </article>
-        <article className="laptop:col-span-1 tablet:col-span-2 mobile:col-span-1 sm:col-span-2 row-span-1 relative">
+        <article className="laptop:col-span-1 tablet:col-span-2 mobile:col-span-1 sm:col-span-2 row-span-1 relative mobile:mt">
           <BlogLayoutTwo blog={sortedBlogs[2]} />
         </article>
         <article className="laptop:col-span-1 tablet:col-span-2 mobile:col-span-1 sm:col-span-2 row-span-1 relative">

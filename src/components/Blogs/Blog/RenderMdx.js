@@ -20,7 +20,7 @@ const RenderMdx = ({ blog }) => {
   const MDXContent = useMDXComponent(blog.body.code);
 
   return (
-    <div className="col-span-8 font-in text-dark dark:text-light prose prose-lg max-w-max prose-blockquote:bg-accent/20 prose-blockquote:p-2 prose-blockquote:px-6 prose-blockquote:border-accent prose-blockquote:not-italic prose-blockquote:rounded-r-lg prose-li:marker:text-accent dark:prose-blockquote:bg-accentDark/80 ">
+    <div className="laptop:col-span-8 tablet:col-span-8 mobile:col-span-12 sm:col-span-12  font-in text-dark dark:text-light prose prose-lg max-w-max prose-blockquote:bg-accent/20 prose-blockquote:p-2 prose-blockquote:px-6 prose-blockquote:border-accent prose-blockquote:not-italic prose-blockquote:rounded-r-lg prose-li:marker:text-accent dark:prose-blockquote:bg-accentDark/80 ">
       <MDXContent components={mdxComponents} />
     </div>
   );

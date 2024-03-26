@@ -41,9 +41,9 @@ export default function BlogPage() {
           className="aspect-square w-full h-full object-cover object-center "
         />
       </div>
-      <BlogDetails blog={blog} slug={slug}/>
-      <div className="grid grid-cols-12 gap-16 mt-8 px-10 text-dark dark:text-light ">
-        <div className="col-span-4">
+      <BlogDetails blog={blog} slug={slug} />
+      <div className="grid grid-cols-12 gap-16 tablet:gap-12 mobile:gap-10 sm:gap-5  mt-8 px-10 text-dark dark:text-light ">
+        <div className="laptop:col-span-4 tablet:col-span-4 mobile:col-span-12 sm:col-span-12 ">
           <details
             className="border-[1px] border-solid border-dark dark:border-light rounded-lg p-4 sticky top-6 max-h-[90vh] overflow-hidden overflow-y-auto"
             open
@@ -68,7 +68,10 @@ export default function BlogPage() {
                           &nbsp;{" "}
                         </span>
                       ) : null}
-                      <span className="hover:underline dark:text-light"> {heading.text}</span>
+                      <span className="hover:underline dark:text-light">
+                        {" "}
+                        {heading.text}
+                      </span>
                     </a>
                   </li>
                 );
